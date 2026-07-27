@@ -3,11 +3,7 @@ function Home() {
   return (
     <>
     <Navbar/>
-    <div>
-
-      <h1>Portfolio OS</h1>
-      
-    </div>
+  
     </>
     
   );

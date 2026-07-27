@@ -7,10 +7,11 @@ export const NavbarContainer = styled.nav`
   left: 0;
   z-index: 1000;
 
-  background: rgba(15, 36, 199, 0.85);
+  background: rgba(10, 12, 24, 0.82);
   backdrop-filter: blur(12px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
 `;
 
 export const NavWrapper = styled.div`
@@ -25,16 +26,32 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Logo = styled.h1`
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffffff;
+export const Logo = styled.div`
+ display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
 `;
 
 export const LogoImage = styled.img`
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+  width: 52px;
+  height: 52px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(255, 255, 255, 0.12);
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+    border-color: #7c5cff;
+    box-shadow: 0 0 18px rgba(124, 92, 255, 0.4);
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -54,13 +71,33 @@ export const NavItem = styled.li`
 
   &:hover {
     color: #7c5cff;
+    transform: translateY(-2px);
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 80%;
+  }
+
 `;
 
 export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+
 `;
 
 export const ThemeButton = styled.button`
@@ -73,6 +110,15 @@ export const ThemeButton = styled.button`
   background: transparent;
   color: white;
   cursor: pointer;
+
+  &:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(124,92,255,.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124,92,255,.25);
+}
+
+transition: all .3s ease;
 `;
 
 export const ResumeButton = styled.button`
@@ -88,4 +134,9 @@ export const ResumeButton = styled.button`
   font-weight: 600;
 
   cursor: pointer;
+
+  &:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(79,70,229,.4);
+}
 `;
