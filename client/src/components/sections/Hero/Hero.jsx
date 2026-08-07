@@ -1,12 +1,14 @@
 import HeroLeft from "./HeroLeft";
 import HeroRight from "./HeroRight";
 
+import { HeroSection } from "./styles";
+
 const Hero = () => {
   return (
-    <section>
+    <HeroSection>
       <HeroLeft />
       <HeroRight />
-    </section>
+    </HeroSection>
   );
 };
 

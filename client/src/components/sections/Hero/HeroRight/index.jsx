@@ -11,8 +11,11 @@ import {
   CodeCard,
 } from "./styles";
 
+
+import profile from "../../../../assets/images/profile.jpg";
+
 const HeroRight = () => {
-    console.log("HeroRight Rendered");
+    
   return (
     <HeroRightContainer>
 
@@ -20,7 +23,7 @@ const HeroRight = () => {
 
       <ProfileCard>
         <ProfileImage
-          src="https://placehold.co/220x220"
+          src={profile}
           alt="Profile"
         />
 

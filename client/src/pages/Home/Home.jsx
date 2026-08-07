@@ -1,5 +1,5 @@
 import Navbar from "../../components/layout/Navbar";
-import Hero from "../../components/sections/Hero/HeroLeft";
+import Hero from "../../components/sections/Hero/Hero";
 function Home() {
   return (
     <>
