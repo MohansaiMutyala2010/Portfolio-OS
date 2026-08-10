@@ -1,10 +1,57 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+
+const glowPulse = keyframes`
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+`;
+
+const floatCard = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+
+const floatSmall = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 export const HeroRightContainer = styled.div`
   position: relative;
 
   width: 500px;
-  height: 600px;
+  height: 520px;
 
   display: flex;
   justify-content: center;
@@ -28,6 +75,8 @@ export const GlowCircle = styled.div`
   filter: blur(25px);
 
   z-index: 0;
+
+  animation: ${glowPulse} 5s ease-in-out infinite;
 `;
 
 export const ProfileCard = styled.div`
@@ -50,6 +99,8 @@ export const ProfileCard = styled.div`
   align-items: center;
 
   z-index: 2;
+
+  animation: ${floatCard} 4s ease-in-out infinite;
 `;
 
 export const ProfileImage = styled.img`
@@ -105,6 +156,8 @@ export const ExperienceCard = styled.div`
     color:#a1a1aa;
     font-size:.9rem;
   }
+
+  animation: ${floatSmall} 4.5s ease-in-out infinite;
 `;
 
 export const ProjectsCard = styled.div`
@@ -135,6 +188,8 @@ export const ProjectsCard = styled.div`
     color:#a1a1aa;
     font-size:.9rem;
   }
+
+  animation: ${floatSmall} 5s ease-in-out infinite;
 `;
 
 export const TechCard = styled.div`
@@ -154,6 +209,14 @@ export const TechCard = styled.div`
   backdrop-filter:blur(16px);
 
   z-index:3;
+
+  transition: all 0.3s ease;
+
+&:hover {
+  transform: translateY(-4px);
+  background: rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
 `;
 
 export const CodeCard = styled.div`
@@ -173,4 +236,11 @@ export const CodeCard = styled.div`
   font-family:monospace;
 
   z-index:3;
+
+  transition: all 0.3s ease;
+
+&:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
+}
 `;

@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 /* Main Hero Left */
 export const HeroLeftContainer = styled.div`
@@ -7,7 +19,7 @@ export const HeroLeftContainer = styled.div`
   align-items: flex-start;
 
   max-width: 650px;
-   padding: 120px 40px;
+  padding: 55px 35px;
 `;
 
 /* Greeting */
@@ -20,13 +32,15 @@ export const Greeting = styled.p`
   color: #a78bfa;
 
   letter-spacing: 0.5px;
+
+  animation: ${fadeUp} 0.6s ease forwards;
 `;
 
 /* Main Heading */
 export const Heading = styled.h1`
   margin: 0;
 
-  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-size: clamp(3rem, 6vw, 4.2rem);
 
   line-height: 1.05;
 
@@ -35,6 +49,11 @@ export const Heading = styled.h1`
   color: #ffffff;
 
   letter-spacing: -2px;
+
+
+  animation: ${fadeUp} 0.7s ease forwards;
+  animation-delay: 0.15s;
+  opacity: 0;
 
   span {
     display: block;
@@ -61,6 +80,10 @@ export const Description = styled.p`
   line-height: 1.8;
 
   color: #a1a1aa;
+
+  animation: ${fadeUp} 0.7s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
 `;
 
 /* CTA Container */
@@ -74,6 +97,10 @@ export const CTAContainer = styled.div`
   margin-top: 34px;
 
   flex-wrap: wrap;
+
+  animation: ${fadeUp} 0.7s ease forwards;
+  animation-delay: 0.45s;
+  opacity: 0;
 `;
 
 /* Primary Button */
@@ -146,6 +173,10 @@ export const SocialLinks = styled.div`
   gap: 22px;
 
   margin-top: 32px;
+
+   animation: ${fadeUp} 0.7s ease forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
 `;
 
 /* Individual Social Link */
