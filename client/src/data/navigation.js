@@ -2,32 +2,32 @@ const navigation = [
   {
     id: 1,
     label: "Home",
-    path: "#home",
+    path: "/",
   },
   {
     id: 2,
     label: "About",
-    path: "#about",
+    path: "/about",
   },
   {
     id: 3,
     label: "Skills",
-    path: "#skills",
+    path: "/skills",
   },
   {
     id: 4,
     label: "Projects",
-    path: "#projects",
+    path: "/projects",
   },
   {
     id: 5,
     label: "Experience",
-    path: "#experience",
+    path: "/experience",
   },
   {
     id: 6,
     label: "Contact",
-    path: "#contact",
+    path: "/contact",
   },
 ];
 

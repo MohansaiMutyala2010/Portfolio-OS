@@ -1,5 +1,5 @@
 import Navbar from "../../components/layout/Navbar";
-import Hero from "../../components/sections/Hero/Hero";
+import Skills from "../../components/sections/Skills/Skills";
 
 
 
@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
     <Navbar/>
-    <Hero />
+    <Skills />
     </>
     
   );

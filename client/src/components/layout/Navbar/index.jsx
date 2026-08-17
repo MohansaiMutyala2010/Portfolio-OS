@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import navigation from "../../../data/navigation";
 import portfolio_logo from "../../../assets/logos/portfolio_logo.png";
 
@@ -46,7 +47,8 @@ const Navbar = () => {
           {navigation.map((item) => (
             <NavItem
               key={item.id}
-              onClick={handleNavClick}
+              to={item.path}
+              
             >
               {item.label}
             </NavItem>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 /* =========================
    NAVBAR
@@ -105,7 +106,7 @@ export const NavLinks = styled.ul`
 `;
 
 
-export const NavItem = styled.li`
+export const NavItem = styled(Link)`
   position: relative;
 
   color: #d1d5db;
@@ -115,6 +116,8 @@ export const NavItem = styled.li`
   font-weight: 500;
 
   cursor: pointer;
+
+   text-decoration: none;
 
   transition: color 0.3s ease;
 
