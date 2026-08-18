@@ -1,19 +1,15 @@
+import OrbitVisual from "../OrbitVisual";
+
 import {
   Hero,
   HeroContent,
   Eyebrow,
   Title,
-  Highlight,
   Description,
   Stats,
   Stat,
   StatNumber,
   StatLabel,
-  Visual,
-  Glow,
-  CoreOrb,
-  Orbit,
-  OrbitItem,
 } from "./styles";
 
 const SkillsHero = ({
@@ -22,6 +18,7 @@ const SkillsHero = ({
 }) => {
   return (
     <Hero>
+
       <HeroContent>
 
         <Eyebrow>
@@ -30,21 +27,18 @@ const SkillsHero = ({
         </Eyebrow>
 
         <Title>
-          Skills That
-          <br />
-          <Highlight>
-            Power My Work
-          </Highlight>
+          Skills & Technologies
         </Title>
 
         <Description>
-          A practical foundation across modern frontend,
-          backend, databases, cloud and development tools.
-          I focus on using the right technology to solve
-          real problems.
+          A practical foundation across modern
+          frontend, backend, databases, cloud and
+          development tools. I focus on using the
+          right technology to solve real problems.
         </Description>
 
         <Stats>
+
           <Stat>
             <StatNumber>
               {totalSkills}+
@@ -74,35 +68,13 @@ const SkillsHero = ({
               Core Stack
             </StatLabel>
           </Stat>
+
         </Stats>
 
       </HeroContent>
 
-      <Visual>
+      <OrbitVisual />
 
-        <Glow />
-
-        <CoreOrb>
-          <span>
-            &lt;/&gt;
-          </span>
-        </CoreOrb>
-
-        <Orbit>
-          <OrbitItem $position="top">
-            Build
-          </OrbitItem>
-
-          <OrbitItem $position="right">
-            Scale
-          </OrbitItem>
-
-          <OrbitItem $position="bottom">
-            Deploy
-          </OrbitItem>
-        </Orbit>
-
-      </Visual>
     </Hero>
   );
 };

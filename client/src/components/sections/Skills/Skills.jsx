@@ -1,66 +1,65 @@
+import { useMemo, useState } from "react";
+
+import {
+  skillCategories,
+  exploringSkills,
+} from "./data";
+
 import SkillsHero from "./SkillsHero";
-import SkillCategory from "./SkillCategory";
+import CategoryTabs from "./CategoryTabs";
+import SkillPanel from "./SkillPanel";
 import Exploring from "./Exploring";
 
 import {
   SkillsPage,
   SkillsContainer,
-  SkillsGrid,
-  SectionHeader,
-  SectionEyebrow,
-  SectionTitle,
-  SectionDescription,
+  SkillsContent,
 } from "./styles";
 
-import { skillCategories } from "./data";
-
 const Skills = () => {
-  const totalSkills = skillCategories.reduce(
-    (total, category) => total + category.skills.length,
-    0
+  const [activeCategory, setActiveCategory] =
+    useState("frontend");
+
+  const activeSkillCategory = useMemo(
+    () =>
+      skillCategories.find(
+        (category) => category.id === activeCategory
+      ),
+    [activeCategory]
   );
 
-  const categoryCount = skillCategories.length;
+  const totalSkills = skillCategories.reduce(
+    (total, category) =>
+      total + category.skills.length,
+    0
+  );
 
   return (
     <SkillsPage>
       <SkillsContainer>
 
-        {/* HERO */}
         <SkillsHero
           totalSkills={totalSkills}
-          categoryCount={categoryCount}
+          categoryCount={skillCategories.length}
         />
 
-        {/* SKILLS */}
-        <section>
-          <SectionHeader>
-            <SectionEyebrow>
-              TECHNOLOGY STACK
-            </SectionEyebrow>
+        <SkillsContent>
 
-            <SectionTitle>
-              Tools I Build With
-            </SectionTitle>
+          <CategoryTabs
+            categories={skillCategories}
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+          />
 
-            <SectionDescription>
-              A practical collection of technologies I use across
-              frontend, backend, databases, cloud and development workflows.
-            </SectionDescription>
-          </SectionHeader>
+          {activeSkillCategory && (
+            <SkillPanel
+              category={activeSkillCategory}
+            />
+          )}
 
-          <SkillsGrid>
-            {skillCategories.map((category) => (
-              <SkillCategory
-                key={category.id}
-                category={category}
-              />
-            ))}
-          </SkillsGrid>
-        </section>
+        </SkillsContent>
 
-        {/* EXPLORING */}
-        <Exploring />
+        <Exploring skills={exploringSkills} />
 
       </SkillsContainer>
     </SkillsPage>

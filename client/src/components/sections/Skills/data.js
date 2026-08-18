@@ -1,34 +1,36 @@
 import {
   FaReact,
+  FaJs,
   FaHtml5,
   FaCss3Alt,
+  FaNodeJs,
   FaGitAlt,
   FaGithub,
   FaDocker,
-  FaAws,
-  FaNodeJs,
 } from "react-icons/fa";
 
 import {
-  SiJavascript,
   SiTypescript,
   SiStyledcomponents,
   SiExpress,
   SiPostgresql,
+  SiPrisma,
+  
   SiSwagger,
   SiPostman,
-  SiPrisma,
-  SiReact,
   SiNextdotjs,
 } from "react-icons/si";
+
+import { FaAws } from "react-icons/fa";
 
 export const skillCategories = [
   {
     id: "frontend",
-    title: "Frontend",
-    description:
-      "Building responsive, accessible and interactive user interfaces.",
+    name: "Frontend",
     icon: FaReact,
+    description:
+      "Building responsive and interactive user interfaces.",
+
     skills: [
       {
         id: "react",
@@ -38,7 +40,7 @@ export const skillCategories = [
       {
         id: "javascript",
         name: "JavaScript",
-        icon: SiJavascript,
+        icon: FaJs,
       },
       {
         id: "typescript",
@@ -65,10 +67,11 @@ export const skillCategories = [
 
   {
     id: "backend",
-    title: "Backend",
-    description:
-      "Developing scalable APIs and reliable server-side applications.",
+    name: "Backend",
     icon: FaNodeJs,
+    description:
+      "Developing robust APIs and server-side applications.",
+
     skills: [
       {
         id: "node",
@@ -83,22 +86,23 @@ export const skillCategories = [
       {
         id: "rest-api",
         name: "REST APIs",
-        shortIcon: "API",
+        icon: FaNodeJs,
       },
       {
         id: "authentication",
         name: "Authentication",
-        shortIcon: "AUTH",
+        icon: FaNodeJs,
       },
     ],
   },
 
   {
     id: "database",
-    title: "Database",
-    description:
-      "Designing structured data models and working with relational databases.",
+    name: "Database",
     icon: SiPostgresql,
+    description:
+      "Designing and managing reliable data systems.",
+
     skills: [
       {
         id: "postgresql",
@@ -108,27 +112,28 @@ export const skillCategories = [
       {
         id: "sql",
         name: "SQL",
-        shortIcon: "SQL",
+        icon: SiPostgresql,
       },
       {
         id: "prisma",
-        name: "Prisma ORM",
+        name: "Prisma",
         icon: SiPrisma,
       },
       {
         id: "database-design",
         name: "Database Design",
-        shortIcon: "DB",
+        icon: SiPostgresql,
       },
     ],
   },
 
   {
     id: "cloud",
-    title: "Cloud & DevOps",
-    description:
-      "Working with cloud services and deployment-oriented infrastructure.",
+    name: "Cloud & DevOps",
     icon: FaAws,
+    description:
+      "Deploying and managing cloud infrastructure.",
+
     skills: [
       {
         id: "aws",
@@ -136,34 +141,35 @@ export const skillCategories = [
         icon: FaAws,
       },
       {
-        id: "s3",
-        name: "Amazon S3",
-        shortIcon: "S3",
+        id: "ec2",
+        name: "EC2",
+        icon: FaAws,
       },
       {
-        id: "rds",
-        name: "Amazon RDS",
-        shortIcon: "RDS",
+        id: "s3",
+        name: "S3",
+        icon: FaAws,
       },
       {
         id: "lambda",
-        name: "AWS Lambda",
-        shortIcon: "λ",
+        name: "Lambda",
+        icon: FaAws,
       },
       {
         id: "cloudwatch",
         name: "CloudWatch",
-        shortIcon: "CW",
+        icon: FaAws,
       },
     ],
   },
 
   {
     id: "tools",
-    title: "Tools",
-    description:
-      "Tools and workflows I use to build, test and maintain applications.",
+    name: "Tools & Others",
     icon: FaGitAlt,
+    description:
+      "Tools that support development and productivity.",
+
     skills: [
       {
         id: "git",
@@ -198,7 +204,7 @@ export const exploringSkills = [
   {
     id: "react-native",
     name: "React Native",
-    icon: SiReact,
+    icon: FaReact,
   },
   {
     id: "nextjs",
@@ -211,13 +217,13 @@ export const exploringSkills = [
     icon: FaDocker,
   },
   {
-    id: "advanced-typescript",
+    id: "typescript-advanced",
     name: "Advanced TypeScript",
     icon: SiTypescript,
   },
   {
     id: "system-design",
     name: "System Design",
-    shortIcon: "◇",
+    icon: FaNodeJs,
   },
 ];
