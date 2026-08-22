@@ -1,7 +1,25 @@
-function Projects(){
-    return <div>
-        <h1>Projects</h1>
-    </div>
-}
+import { projects } from "./data";
 
-export default Projects
+import ProjectHeader from "./ProjectHeader";
+import ProjectGrid from "./ProjectGrid";
+
+import {
+  ProjectsPage,
+  ProjectsContainer,
+} from "./styles";
+
+const Projects = () => {
+  return (
+    <ProjectsPage>
+      <ProjectsContainer>
+
+        <ProjectHeader />
+
+        <ProjectGrid projects={projects} />
+
+      </ProjectsContainer>
+    </ProjectsPage>
+  );
+};
+
+export default Projects;
