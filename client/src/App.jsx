@@ -5,6 +5,7 @@ import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import ProjectDetails from "./pages/ProjectDetails/index";
+import Experience from "./pages/Experience/index";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
   element={<ProjectDetails />}
 />
 
+<Route
+  path="/experience"
+  element={<Experience />}
+/>
       </Routes>
     </BrowserRouter>
   );
