@@ -1,5 +1,5 @@
 import Navbar from "../../components/layout/Navbar";
-import ExperienceSection from "../../components/sections/Experience/Experience";
+import ExperienceSection from "../../components/sections/Experience/ExperienceSection";
 
 
 
@@ -7,7 +7,7 @@ function Experience() {
   return (
     <>
     <Navbar/>
-    <Experience/>
+    <ExperienceSection/>
     </>
     
   );

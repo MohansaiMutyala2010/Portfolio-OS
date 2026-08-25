@@ -81,6 +81,8 @@ const Navbar = () => {
           {navigation.map((item) => (
             <MobileNavItem
               key={item.id}
+              as={Link}
+              to={item.path}
               onClick={handleNavClick}
             >
               {item.label}

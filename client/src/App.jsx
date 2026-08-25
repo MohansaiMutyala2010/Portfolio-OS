@@ -6,6 +6,7 @@ import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import ProjectDetails from "./pages/ProjectDetails/index";
 import Experience from "./pages/Experience/index";
+import Contact from "./pages/Contact/index";
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
 <Route
   path="/experience"
   element={<Experience />}
+/>
+
+<Route
+  path="/contact"
+  element={<Contact />}
 />
       </Routes>
     </BrowserRouter>
