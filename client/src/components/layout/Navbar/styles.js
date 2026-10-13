@@ -40,9 +40,15 @@ export const NavWrapper = styled.div`
   align-items: center;
 
   justify-content: space-between;
-  @media (max-width: 768px) {
-    padding: 0 20px;
+  
+  @media (max-width: 1100px) {
+    padding: 0 24px;
   }
+
+  @media (max-width: 480px) {
+    padding: 0 16px;
+  }
+
 `;
 
 
@@ -100,7 +106,7 @@ export const NavLinks = styled.ul`
 
   padding: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width:  1100px) {
     display: none;
   }
 `;
@@ -252,7 +258,7 @@ export const ResumeButton = styled.button`
   }
 
     /* Mobile */
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
@@ -293,7 +299,7 @@ export const MenuButton = styled.button`
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: 1100px) {
     display: flex;
 
     align-items: center;

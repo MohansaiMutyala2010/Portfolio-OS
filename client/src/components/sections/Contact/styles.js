@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactSection = styled.section`
+export const ContactSectionWrapper = styled.section`
   width: 100%;
 
   min-height: calc(100vh - 80px);

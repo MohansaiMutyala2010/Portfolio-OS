@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 import ContactFooter from "./ContactFooter";
 
 import {
-  ContactSection,
+  ContactSectionWrapper,
   ContactContainer,
   ContactGrid,
   LeftColumn,
@@ -13,7 +13,7 @@ import {
 
 const ContactSection = () => {
   return (
-    <ContactSection>
+    <ContactSectionWrapper>
       <ContactContainer>
 
         <ContactGrid>
@@ -32,7 +32,7 @@ const ContactSection = () => {
         <ContactFooter />
 
       </ContactContainer>
-    </ContactSection>
+    </ContactSectionWrapper>
   );
 };
 
